@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN</title>
+  <link rel="shortcut icon" href="assets/Flipkart-logo.png.jpg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      color: white;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('assets/loginn.png.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    ::selection{
+      color: lightblue;
+      background-color: white;
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+     padding: 35px;
+      backdrop-filter: blur(10px);
+      border: 1px solid lightblue;
+      height: 450px;
+      width: 300px;
+      border-radius: 10px;
+    }
+    .one h1{
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .two{
+      display: flex;
+      flex-direction: column;
+    }
+    .two input,.three input{
+      padding: 5px 10px;
+      color: white;
+      font-size: 13px;
+      margin-bottom: 13px;
+      margin-left: 15px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid white;
+    }
+    .two input::placeholder,.three input::placeholder{
+      color: lightblue;
+      opacity: 0.9;
+    }
+    .two label,.three label{
+      margin-bottom: 5px;
+    }
+    
+    .three input{
+      margin-bottom: 4px;
+    }
+    .two input:focus,.three input:focus{
+      outline: none;
+    }
+    .three{
+      display: flex;
+      flex-direction: column;
+    }
+    .four{
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .four a{
+    font-size: 12px;
+      text-decoration: none;
+    }    
+    .four a:after{
+      content: '';
+      position: absolute;
+      width: 0px;
+      border-radius: 10px;
+      height: 2.5px;
+      background-color: white;
+      top: 23px;
+      left: 0;
+      transition: all 0.55s;
+    }
+    .four a:hover::after{
+      width: 105px;
+    }
+    .five{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .five button{
+      border: none;
+      background-color: rgb(0, 52, 101);
+      padding: 5px 10px;
+      border-radius: 7px;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-size: 17px;
+    }
+    .five button:hover{
+      background-color: hsl(209, 100%, 30%);
+    }
+    .five button:active{
+      background-color: hsl(209, 100%, 15%);
+    }
+    .six{
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      font-size: smaller;
+      margin-right: 3px;
+    }
+    .six:before{
+      position: absolute;
+      content: '';
+      background-color: white;
+      height: 1px;
+      width: 30%;
+      left: 0;
+      top: 10px;
+    }
+    .six:after{
+      position: absolute;
+      content: '';
+      background-color: white;
+      height: 1px;
+      width: 30%;
+      right: 0;
+      top: 10px;
+    }
+    .seven{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+      gap: 10px;
+    }
+    .seven button{
+    border: none;
+    padding: 5px 0px;
+    background-color: rgb(0, 52, 101);
+      cursor: pointer;
+      width: 100%;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      font-size: 17px;
+      transition: all 0.15s;
+    }
+    .seven button:hover{
+      background-color: hsl(209, 100%, 30%);
+    }
+    .seven button:active{
+      background-color: hsl(209, 100%, 15%);
+    }
+    .eight{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .eight p{
+      font-weight: 300;
+    }
+    .eight a{
+      position: relative;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .eight a:after{
+      content: '';
+      position: absolute;
+      width: 0px;
+      border-radius: 10px;
+      height: 2.5px;
+      background-color: white;
+      top: 23px;
+      left: 0;
+      transition: all 0.55s;
+    }
+    .eight a:hover::after{
+      width: 126px;
+    }
+  </style>
+  <div class="wrapper">
+    <form action="#">
+  <div class="form">
+    <div class="one">
+      <div><h1>Login</h1></div>
+    </div>
+    <div class="two">
+      <label for="email">Email</label>
+      <input type="email" id="email" required placeholder="username@gmail.com">
+    </div>
+    <div class="three">
+      <label for="emails">Password</label>
+      <input type="password" id="emails"  placeholder="password" required>
+    </div>
+    <div class="four">
+      <a href="#">Forgot Password?</a>
+    </div>
+    <div class="five">
+      <Button onclick="window.location.href='https://www.flipkart.com/';" type="submit">Sign in</Button>
+    </div>
+    <div class="six">
+      <p>or continue with</p>
+    </div>
+    <div class="seven">
+      <button><i class="fa-brands fa-google"></i></button>
+      <button><i class="fa-brands fa-github"></i></button>
+      <button><i class="fa-brands fa-facebook"></i></button>
+    </div>
+    <div class="eight">
+      <p>Don't have an account yet? </p>
+      <a href="#"> Register for free</a>
+    </div>
+  </div>
+</form>
+</div>
+</body>
+</html>
